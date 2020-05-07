@@ -29,7 +29,7 @@ import java.net.ContentHandler;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Address extends Contact{
+public class Address extends Contact {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         ArrayList<String> patientInfo = new ArrayList<>();
@@ -74,10 +74,10 @@ public class Address extends Contact{
         patientInfo.add(admitOne.getState()); //add to Array
 
         System.out.println("Which of these symptoms are you experiencing?");
-        for(int i=0; i < sickness.size(); i++){
+        for (int i = 0; i < sickness.size(); i++) {
             System.out.println("Are you experiencing " + sickness.get(i) + "?");
             String restriction = keyboard.nextLine();
-            if (restriction.equalsIgnoreCase("y")){
+            if (restriction.equalsIgnoreCase("y")) {
                 patientSymptoms.add(sickness.get(i));
                 System.out.println("How many days have you been experiencing this symptom?");
                 admitOne.setDaysWithSymptoms(keyboard.nextLine());
@@ -93,7 +93,7 @@ public class Address extends Contact{
 
         System.out.println("Have you come in contact with anyone?");
         String hasContact = keyboard.nextLine();
-        if (hasContact.equalsIgnoreCase("y")){
+        if (hasContact.equalsIgnoreCase("y")) {
             Contact infected = new Contact();
             System.out.println("Enter the name of the contacted person");
             infected.setNameOfContact(keyboard.nextLine());
@@ -141,8 +141,8 @@ public class Address extends Contact{
             System.out.println();
             System.out.println();
             System.out.println("************Symptoms****************");
-            for(int j=0; j < patientSymptoms.size(); j++){
-                for(int k=0; k < daysSick.size(); k++){
+            for (int j = 0; j < patientSymptoms.size(); j++) {
+                for (int k = 0; k < daysSick.size(); k++) {
                     System.out.println("Patient was sick with " + patientSymptoms.get(j) + "for " + daysSick.get(k)
                             + " days");
                 }
@@ -159,11 +159,19 @@ public class Address extends Contact{
             System.out.println("Date of contact " + infected.getDayOfContact() + "/" + infected.getMonthOfContact() + "/" + infected.getYearOfContact());
 
         } else {
-            System.out.println(patientInfo);
-            for(int j=0; j < patientSymptoms.size(); j++){
-                for(int k=0; k < daysSick.size(); k++){
+            System.out.println("****************Contract Tracing Report**************");
+            System.out.println("Name: " + admitOne.getName());
+            System.out.println("Phone: " + admitOne.getPhoneNum());
+            System.out.println("Email: " + admitOne.getEmail());
+            System.out.println("City: " + admitOne.getCity());
+            System.out.println("State: " + admitOne.getState());
+
+            for (int j = 0; j < patientSymptoms.size(); j++) {
+                for (int k = 0; k < daysSick.size(); k++) {
                     System.out.println("Patient was sick with " + patientSymptoms.get(j) + "for " + daysSick.get(k)
-                    + " days");
+                            + " days");
+                    j++;
+                    k++;
                 }
             }
         }
