@@ -1,3 +1,30 @@
+/**
+ * Get user name
+ * email
+ * phone num
+ * address
+ * ask if they have symptoms
+ * if yes as how many days
+ * then
+ * describe their symptoms
+ * then ask if they have come in contact with someone
+ * if yes
+ * ask for contact name
+ * ask for contact email address
+ * ask for contact phone number
+ * ask for contact address
+ * ask for location of contact
+ * ask for date of contact
+ *
+ * then print out patient information
+ * the print out symptoms with duration
+ * then print contact information
+ * */
+
+
+
+
+
 import java.net.ContentHandler;
 import java.util.ArrayList;
 import java.util.Scanner;

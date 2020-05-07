@@ -110,11 +110,4 @@ public class Contact extends Patient{
 //        this.yearOfContact = yearOfContact;
 //        return "date of contact: " + dayOfContact + "/" + monthOfContact + "/" + yearOfContact;
 //    }
-
-    protected String dateOfContact(String dayOfContact, String monthOfContact, String yearOfContact) {
-        this.dayOfContact = dayOfContact;
-        this.monthOfContact = monthOfContact;
-        this.yearOfContact = yearOfContact;
-        return "date of contact: " + dayOfContact + "/" + monthOfContact + "/" + yearOfContact;
-    }
 }
